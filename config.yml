@@ -1,0 +1,6 @@
+chatgpt:
+  model: "text-davinci-003"
+  temperature: 1
+  max_tokens: 100
+  prompt: >
+    Summarize the following into concise meeting notes in bullet point form. If appropriate, suggest action items, and denote the speaker when possible:
