@@ -1,8 +1,5 @@
 import os
-import openai
-import yaml
-
-
+import openai\nimport yaml\n\n\nopenai.api_key = os.getenv(\"OPENAI_API\")\n\n\nclass Summarizer:\n    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):\n        self.model = model\n        self.temperature = temperature\n        self.max_tokens = max_tokens\n        self.prompt = prompt.strip()\n\n    def summarize(self, text):\n        prompt = self.prompt + ' ' + text\n\n        response = openai.ChatCompletion.create(\n            model=self.model,\n            prompt=prompt,\n
 openai.api_key = os.getenv("OPENAI_API")
 
 
@@ -15,13 +12,9 @@ class Summarizer:
 
     def summarize(self, text):
         prompt = self.prompt + ' ' + text
-
-        response = openai.Completion.create(
-            model=self.model,
+import openai\nimport yaml\n\n\nopenai.api_key = os.getenv(\"OPENAI_API\")\n\n\nclass Summarizer:\n    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):\n        self.model = model\n        self.temperature = temperature\n        self.max_tokens = max_tokens\n        self.prompt = prompt.strip()\n\n    def summarize(self, text):\n        prompt = self.prompt + ' ' + text\n\n        response = openai.ChatCompletion.create(\n            model=self.model,\n            prompt=prompt,\n            model=self.model,
             prompt=prompt,
-            temperature=self.temperature,
-            max_tokens=self.max_tokens,
-        )
+import openai\nimport yaml\n\n\nopenai.api_key = os.getenv(\"OPENAI_API\")\n\n\nclass Summarizer:\n    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):\n        self.model = model\n        self.temperature = temperature\n        self.max_tokens = max_tokens\n        self.prompt = prompt.strip()\n\n    def summarize(self, text):\n        prompt = self.prompt + ' ' + text\n\n        response = openai.ChatCompletion.create(\n            model=self.model,\n            prompt=prompt,\n            temperature=self.temperature,\n            max_tokens=self.max_tokens,\n            chat_log=[\"User: \" + text + \"\nAI:\"]\n        )\n\n        message = response.choices[0].text.strip()\n        return message        )
 
         return response["choices"][0].text
 
