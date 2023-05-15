@@ -12,6 +12,65 @@ class Summarizer:
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.prompt = prompt.strip()
+import openai
+import yaml
+import openai
+import yaml
+
+
+openai.api_key = os.getenv("OPENAI_API")
+
+
+class Summarizer:
+    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):
+        self.model = model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.prompt = prompt.strip()
+
+    def summarize(self, text):
+        prompt = self.prompt + ' ' + text
+
+        response = openai.ChatCompletion.create(
+            model=self.model,
+            prompt=prompt,
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+            chat_log=["User: " + text + "\nAI:"]
+        )
+
+        message = response.choices[0].text.strip()
+        return messageopenai.api_key = os.getenv("OPENAI_API")
+
+
+class Summarizer:
+    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):
+        self.model = model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.prompt = prompt.strip()
+
+    def summarize(self, text):
+        prompt = self.prompt + ' ' + text
+
+        response = openai.ChatCompletion.create(
+            model=self.model,
+            prompt=prompt,
+        prompt = self.prompt + ' ' + text
+
+        response = openai.ChatCompletion.create(
+            model=self.model,
+            prompt=prompt,
+
+openai.api_key = os.getenv("OPENAI_API")
+
+
+class Summarizer:
+    def __init__(self, model: str, temperature: int, max_tokens: int, prompt: str):
+        self.model = model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.prompt = prompt.strip()
 
     def summarize(self, text):
         prompt = self.prompt + ' ' + text
