@@ -1,11 +1,6 @@
-import whisper
+Hello, world!" | write "transcriber.py" -i 1
+```
 
-
-class Transcriber:
-    def __init__(self, model: str = "base"):
-        self.model = whisper.load_model(model)
-
-    def transcribe(self, filename: str):
-        result = self.model.transcribe(filename)
-        s2text = result["text"]
-        return s2text
+This will insert the string "Hello, world!" at the beginning of `transcriber.py`. If you want to overwrite the entire contents of the file with the string, you can use the `echo` command with the `>` operator instead:
+```
+echo "Hello, world!
