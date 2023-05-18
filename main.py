@@ -1,8 +1,5 @@
 import os
-
-import fire
-import openai
-import whisper
+"""This module contains the main function that records audio, transcribes it, summarizes it, and prints the summary."""import whisper
 
 from recorder import Recorder
 from summarizer import Summarizer
