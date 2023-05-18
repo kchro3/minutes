@@ -1,5 +1,4 @@
-import os
-
+'''This script records audio, transcribes it, and summarizes the text using OpenAI's GPT-3 API.'''
 import fire
 import openai
 import whisper
