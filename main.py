@@ -1,4 +1,20 @@
-import os
+"""This module contains the main function for recording and summarizing audio files.
+
+The main function is defined as `main(config_file:str='config.yml', debug:bool=False)`. It takes the following arguments:
+- `config_file`: A string that represents the path to the configuration file. Default value is `config.yml`.
+- `debug`: A boolean that represents whether to enable debug mode or not. Default value is `False`.
+
+Returns:
+- None
+
+Example usage:
+```python
+import main
+
+if __name__ == '__main__':
+    main.main()
+```
+"""
 
 import fire
 import openai
