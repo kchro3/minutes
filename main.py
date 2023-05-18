@@ -1,7 +1,24 @@
 import os
+"""This script records audio, transcribes it, and summarizes the text.
 
-import fire
-import openai
+The script uses the Recorder, Transcriber, and Summarizer classes to perform these tasks. The Recorder class records audio, the Transcriber class transcribes the audio to text, and the Summarizer class summarizes the text.
+
+The script uses the openai and whisper libraries to perform these tasks. The openai library is used to access the OpenAI API, and the whisper library is used to load the summarization model.
+
+The script can be run from the command line using the Fire library. The script takes two optional arguments: config_file and debug. The config_file argument specifies the path to the configuration file, and the debug argument specifies whether to play back the recorded audio.
+
+Args:
+    config_file (str): Path to the configuration file.
+    debug (bool): Whether to play back the recorded audio.
+
+"""
+The script uses the Recorder, Transcriber, and Summarizer classes to perform these tasks. The Recorder class records audio, the Transcriber class transcribes the audio to text, and the Summarizer class summarizes the text.
+
+The script uses the openai and whisper libraries to perform these tasks. The openai library is used to access the OpenAI API, and the whisper library is used to load the summarization model.
+
+The script can be run from the command line using the Fire library. The script takes two optional arguments: config_file and debug. The config_file argument specifies the path to the configuration file, and the debug argument specifies whether to play back the recorded audio.
+
+"""import openai
 import whisper
 
 from recorder import Recorder
