@@ -1,5 +1,217 @@
-import os
+"""This module is for recording, transcribing, and summarizing audio files.
 
+This module is intended to be run from the command line.
+
+Example:
+    $ python file.py
+
+    # press any key to record, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D to exit
+
+    # press any key to try again, ctrl-D
 import fire
 import openai
 import whisper
