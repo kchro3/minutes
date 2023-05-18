@@ -1,3 +1,11 @@
+"""This is a module docstring"""Usage:
+    file.py [--config=<config_file>] [--debug]
+
+Options:
+    --config=<config_file>  The config file to use [default: config.yml]
+    --debug                 Playback the recording before summarizing
+"""
+
 import os
 
 import fire
