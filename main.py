@@ -8,6 +8,8 @@ Classes:
 
 Functions:
     main(config_file: str = 'config.yml', debug: bool = False): the main function for recording, transcribing, and summarizing audio files. Uses the Recorder, Transcriber, and Summarizer classes.
+Example usage: 
+    fire.Fire(main)
 """
 import os
 
