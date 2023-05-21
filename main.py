@@ -1,3 +1,16 @@
+
+"""A module for recording, transcribing, and summarizing audio files using various APIs and models.
+
+Classes:
+    Recorder: a class for recording audio files
+    Summarizer: a class for summarizing text using a specified model and configuration
+    Transcriber: a class for transcribing audio files using various APIs
+
+Functions:
+    main(config_file: str = 'config.yml', debug: bool = False): the main function for recording, transcribing, and summarizing audio files. Uses the Recorder, Transcriber, and Summarizer classes.
+Example usage: 
+    fire.Fire(main)
+"""
 import os
 
 import fire
