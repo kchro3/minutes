@@ -12,6 +12,9 @@ assert np
 
 
 class Recorder:
+    """
+    This class is used to record and playback audio.
+    """
     def __init__(self):
         self.input_device_id, self.output_device_id = sd.default.device
 
